@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id = "root" styleClass="border" fx:controller = "clientController" prefHeight = "700" prefWidth = "1000">
+	<top><Label fx:id = "titleLabel" text = "Baccarat Game" BorderPane.alignment="CENTER"/></top>
+	
+	<left><VBox fx:id = "topLeftVBox" spacing="10" alignment = "TOP_CENTER">
+		<TextField fx:id = "betAmountTF" promptText = "Enter Dollar Amount"/>
+		<Button fx:id = "playRoundBtn" text = "Play" disable= "true" onAction = "#playRoundBtnMethod"/>
+	</VBox></left>
+	
+	<right><VBox fx:id = "topRightVBox" spacing="10" alignment="TOP_CENTER">
+		<Label fx:id = "pickWinnerLabel" text = "Select what you want to be on"/>
+		<HBox fx:id = "winnerBetButtonHBox" spacing="10">
+			<Button fx:id = "playerWinsBtn" text = "Player" onAction = "#playerBetOnBtnMethod"/>
+			<Button fx:id = "drawBtn" text = "Draw" onAction = "#drawBetOnBtnMethod"/>
+			<Button fx:id = "bankerWinsBtn" text = "Banker" onAction = "#bankerBetOnBtnMethod"/>
+		</HBox>
+	</VBox></right>
+	
+	<center><GridPane fx:id = "cardInfoGrid" alignment="center" hgap="20" vgap="20" minHeight = "300" minWidth = "300">
+		<padding><Insets top="40" right="40" bottom="40" left="40"/></padding>
+		<Label fx:id = "cardOneLabel" text = "Player Card 1" GridPane.columnIndex="0" GridPane.rowIndex="0" prefHeight = "100" prefWidth = "75" wrapText="true" style = "-fx-background-color: lightgrey;"/>
+		<Label fx:id = "cardTwoLabel" text = "Player Card 2" GridPane.columnIndex="1" GridPane.rowIndex="0" prefHeight = "100" prefWidth = "75" wrapText="true" style = "-fx-background-color: lightgrey;"/>
+		<Label fx:id = "cardThreeLabel" text = "Banker Card 1" GridPane.columnIndex="0" GridPane.rowIndex="1" prefHeight = "100" prefWidth = "75" wrapText="true" style = "-fx-background-color: lightgrey;"/>
+		<Label fx:id = "cardFourLabel" text = "Banker Card 2" GridPane.columnIndex="1" GridPane.rowIndex="1" prefHeight = "100" prefWidth = "75" wrapText="true" style = "-fx-background-color: lightgrey;"/>
+	</GridPane></center>
+	
+	<bottom><Button fx:id = "exitButton" text = "Exit" onAction = "#exitBtnMethod" BorderPane.alignment="TOP_RIGHT"/></bottom>
+	
+	
+</BorderPane>
+

@@ -1,0 +1,27 @@
+.button{
+	-fx-font-size: 14px;
+	-fx-font-weight: bold;
+	-fx-background-color: aliceblue;
+	-fx-min-width: 75;
+	-fx-text-alignment: center;
+}
+
+.text-field{
+	-fx-background-color: aliceblue;
+	-fx-min-width: 250;
+}
+
+.label{
+	-fx-text-alignment: center;
+	-fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+    -fx-background-radius: 5px;
+}
+
+.root{
+	-fx-background-color: cornflowerblue;
+	-fx-background-position: center center;
+	-fx-font-family: 'serif';
+	-fx-padding: 40 40 40 40;
+}
